@@ -47,6 +47,19 @@ resource "aws_autoscaling_group" "app" {
   }
 }
 
+# Target Tracking Scaling Policy
+resource "aws_autoscaling_policy" "cpu_target_tracking" {
+  name                   = "cpu-target-tracking-policy"
+  autoscaling_group_name = aws_autoscaling_group.app.name
+  policy_type            = "TargetTrackingScaling"
+  target_tracking_configuration {
+    predefined_metric_specification {
+      predefined_metric_type = "ASGAverageCPUUtilization"
+    }
+    target_value = 30.0
+  }
+}
+
 # Security Groups
 resource "aws_security_group" "frontend_sg" {
   vpc_id = "main-vpc"  # Replace with your VPC ID
