@@ -5,5 +5,8 @@ The goal is to create a web server that can scale up and down to meet website tr
 
 ![image](https://github.com/user-attachments/assets/64350253-37c7-4d44-8bb2-ebf09b66727a)
 
+## VPC
+ It involves creating 3 public subnets and 3 private subnets. Here, is where all the resources are created.
 
-
+## EC2
+  
