@@ -21,3 +21,6 @@ The goal is to create a web server that can scale up and down to meet website tr
 -   **Security Groups**: Defines security groups for frontend and backend instances.
 -   **Load Balancer**: Sets up an Application Load Balancer with a target group and listener.
 -   **Target Group Attachment**: Attaches frontend instances to the load balancer’s target group.
+
+
+To trigger scaling we use Target Tracking. This is where you set a policy that you always want the average CPU utilisation to be something like 30%,this means that the instances get added or taken away automatically so that the average is always 30% no matter how much or how little traffic comes into the service.
