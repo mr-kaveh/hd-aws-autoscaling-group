@@ -14,3 +14,10 @@ The goal is to create a web server that can scale up and down to meet website tr
 -   **Backend Instances**: Creates 3 backend EC2 instances in private subnets, running Apache web server that prints the instance ID.
 -   **Load Balancer**: Sets up an Application Load Balancer with a target group and listener.
 -   **Target Group Attachment**: Attaches frontend instances to the load balancer’s target group.
+
+## Autoscaling Group
+-   **Launch Template**: Defines the configuration for the EC2 instances, including the AMI, instance type, security groups, and user data.
+-   **Auto Scaling Group**: Manages the desired number of instances, scaling up or down based on demand. It uses the launch template and is connected to the ALB’s target group.
+-   **Security Groups**: Defines security groups for frontend and backend instances.
+-   **Load Balancer**: Sets up an Application Load Balancer with a target group and listener.
+-   **Target Group Attachment**: Attaches frontend instances to the load balancer’s target group.
