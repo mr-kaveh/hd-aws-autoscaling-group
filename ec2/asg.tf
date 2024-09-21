@@ -1,3 +1,16 @@
+##################################
+### Elements in this file:
+### - aws_launch_template
+### - aws_autoscaling_group
+### - aws_autoscaling_policy
+### - aws_security_group.frontend_sg
+### - aws_security_group.backend_sg
+### - aws_lb
+### - aws_lb_target_group
+### - aws_lb_listener
+### - aws_lb_target_group_attachment
+##################################
+
 provider "aws" {
   region = "eu-central-1"  # Change to your desired region
 }
