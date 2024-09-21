@@ -105,7 +105,7 @@ resource "aws_lb" "alb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.frontend_sg.id]
-  subnets            = ["your-public-subnet-1-id", "your-public-subnet-2-id", "your-public-subnet-3-id"]  # Replace with your public subnet IDs
+  subnets            = ["public-subnet-1", "public-subnet-2", "public-subnet-3"]  # Replace with your public subnet IDs
   tags = {
     Name = "app-load-balancer"
   }
